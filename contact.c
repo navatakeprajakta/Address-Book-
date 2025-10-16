@@ -131,6 +131,78 @@ void searchContact(AddressBook *addressBook) {
     else printf("-----------------------------------------------------------\nFound %d match(es).\n", found);
 }
 
+// -------- Edit Contact --------
+void editContact(AddressBook *addressBook) {
+    if (addressBook->contactCount == 0) {
+        printf("No contacts to edit.\n");
+        return;
+    }
+
+    char phone[20];
+    printf("Enter phone number of contact to edit: ");
+    scanf("%s", phone);
+
+    int idx = -1;
+    for (int i = 0; i < addressBook->contactCount; i++) {
+        if (strcmp(addressBook->contacts[i].phone, phone) == 0) {
+            idx = i;
+            break;
+        }
+    }
+
+    if (idx == -1) {
+        printf("Contact not found.\n");
+        return;
+    }
+
+    Contact *c = &addressBook->contacts[idx];
+    printf("Editing contact:\n1. Name: %s\n2. Phone: %s\n3. Email: %s\n4. Cancel\n", 
+           c->name, c->phone, c->email);
+
+    int choice;
+    printf("Choose field to edit: ");
+    scanf("%d", &choice);
+    getchar();
+
+    char input[50];
+    switch (choice) {
+        case 1:
+            printf("Enter new name: ");
+            fgets(input, sizeof(input), stdin);
+            input[strcspn(input, "\n")] = '\0';
+            strcpy(c->name, input);
+            printf("Name updated!\n");
+            break;
+
+        case 2:
+            printf("Enter new phone (10 digits): ");
+            fgets(input, sizeof(input), stdin);
+            input[strcspn(input, "\n")] = '\0';
+            strcpy(c->phone, input);
+            printf("Phone updated!\n");
+            break;
+
+        case 3:
+            printf("Enter new email: ");
+            fgets(input, sizeof(input), stdin);
+            input[strcspn(input, "\n")] = '\0';
+            strcpy(c->email, input);
+            printf("Email updated!\n");
+            break;
+
+        case 4:
+            printf("Edit cancelled.\n");
+            return;
+
+        default:
+            printf("Invalid choice.\n");
+            return;
+    }
+
+    printf("Contact updated successfully!\n");
+}
+
+
 // -------- Delete Contact --------
 void deleteContact(AddressBook *addressBook) {
     if (addressBook->contactCount == 0) { printf("No contacts.\n"); return; }
