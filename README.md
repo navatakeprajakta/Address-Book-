@@ -57,7 +57,7 @@ Open a terminal inside your project folder and run:
 gcc main.c contact.c file.c -o addressbook
 ./addressbook
 
-**** Menu Options****
+****Menu Options****
 Address Book Menu:
 1. Create contact
 2. Search contact
@@ -68,13 +68,13 @@ Address Book Menu:
 
 After choosing 6. Exit, all changes are saved to Addressbook.csv.
 
-** Validation Rules**
+**Validation Rules**
 Field	Validation
 Name	Only letters and spaces (min 2 characters)
 Phone	Exactly 10 digits, digits only, no duplicates
 Email	Lowercase only, must contain ‘@’ and end with ‘.com’, unique
 
-** Example Run**
+ **Example Run**
 Address Book Menu:
 1. Create contact
 2. Search contact
@@ -97,11 +97,14 @@ Saving and Exiting...
 Contacts saved to Addressbook.csv
 
 
-**👨‍💻 Developed By
-**
+**👨‍💻 Developed By**
+<br>
 Name: Prajakta Navatake 
+<br>
 Date: October 2025
+<br>
 Language: C (using GCC)
+<br>
 Data Persistence: CSV File I/O
 
 **🏁 Future Enhancements**
