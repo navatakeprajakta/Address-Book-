@@ -6,6 +6,7 @@ You can add, search, edit, delete, and list contacts.
 All contact data is stored in a CSV file (Addressbook.csv) and saved automatically when you exit the program.
 
 **Features**
+<br>
 ✅ Create New Contacts
 Stores Name, Phone, and Email
 Validates inputs before adding
@@ -108,7 +109,11 @@ Language: C (using GCC)
 Data Persistence: CSV File I/O
 
 **🏁 Future Enhancements**
+<br>
 Add auto-save after every create/edit/delete
+<br>
 Implement sorting (by name or phone)
+<br>
 Add password protection
+<br>
 Support JSON or SQLite storage
