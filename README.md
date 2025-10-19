@@ -29,15 +29,25 @@ Data automatically loads back the next time the program starts
 
 **📁 Project Structure**
 **AddressBook/**
+<br>
 │
+<br>
 ├── main.c              # Menu & program control
+<br>
 ├── contact.c           # Core operations (create, search, edit, delete)
+<br>
 ├── contact.h           # Data structures & function declarations
+<br>
 ├── file.c              # File I/O for saving and loading contacts
+<br>
 ├── file.h              # Declarations for file functions
+<br>
 ├── populate.c          # (Optional) Dummy data population
+<br>
 ├── populate.h          # Header for dummy data
+<br>
 ├── Addressbook.csv     # CSV file storing saved contacts
+<br>
 └── README.md           # Project documentation
 
 ⚙️ How to Compile and Run
@@ -75,8 +85,11 @@ Address Book Menu:
 Enter your choice: 1
 
 Enter name: Jane Doe
+<br>
 Enter phone (10 digits): 9876543210
+<br>
 Enter email: jane.doe@gmail.com
+<br>
 ✅ Contact added successfully!
 
 Enter your choice: 6
